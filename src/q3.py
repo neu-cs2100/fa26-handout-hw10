@@ -58,5 +58,6 @@ class Date:
         
         Raises:
             ValueError: If the date_string does not contain two hyphens, or if the year, 
-                    month, or day cannot be converted to integers.
+                    month, or day are not integers with the appropriate number of digits 
+                    (year: 4 digits, month: 2 digits, day: 2 digits).
         """
