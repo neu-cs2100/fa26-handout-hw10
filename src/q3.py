@@ -28,6 +28,14 @@ class Date:
         self.month = month
         self.day = day
 
+    def __str__(self) -> str:
+        return f"{self.year:04d}-{self.month:02d}-{self.day:02d}"
+
+    def __eq__(self, other: object) -> bool:
+        if not isinstance(other, Date):
+            return False
+        return self.year == other.year and self.month == other.month and self.day == other.day
+
     @classmethod
     def from_timestamp(cls, timestamp: float) -> Date:
         """

@@ -22,6 +22,14 @@ class Counter:
         self._instance_number: int = Counter.count  # Instance variable to store the instance number
         Counter.count += 1  # Increment the class variable count whenever a new instance is created
 
+    def __str__(self) -> str:
+        return f"Counter instance {self.instance_number}"
+
+    def __eq__(self, other: object) -> bool:
+        if not isinstance(other, Counter):
+            return False
+        return self.instance_number == other.instance_number
+
     @property
     def instance_number(self) -> int:
         """Returns the instance number of the Counter object."""

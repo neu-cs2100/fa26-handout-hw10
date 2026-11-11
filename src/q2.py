@@ -14,6 +14,8 @@ Your task is to write the following three classes:
    - `handle` should be stored in a "protected" attribute named with a single underscore (e.g., 
      `self._handle`). It should only be externally accessible through a property named `handle` 
      with both a getter and a setter (which validates the handle).
+   - Two `GamePlayer` instances are considered equal if they have the same player ID and handle.
+   - The `__str__()` method should return the handle.
 
 2. RegularPlayer: Inherits from GamePlayer without adding any new attributes or methods.
 
@@ -25,8 +27,8 @@ Your task is to write the following three classes:
    - If `is_subscribed` is False, raise a ValueError in the constructor.
    - Overwrite the `handle` property so that it returns the handle with
      a star and a space prepended (for example, "★ User123").
-   - The constructor and the overridden property must reuse the code from
-     GamePlayer rather than duplicating it.
+   - The `__str__()` method should also return the handle with a star and a space prepended.
+   - Reuse code whenever possible.
 
 Make sure to write tests in the tests directory.
 """
