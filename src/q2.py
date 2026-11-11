@@ -5,8 +5,9 @@ Your task is to write the following three classes:
 1. GamePlayer: A base class representing a player in an online game.
 
    - The constructor takes two parameters: `player_id` (str) and `handle` (str). A valid handle 
-     is between 4 and 12 characters long (inclusive) and contains only letters and numbers. If 
-     the handle is invalid, raise a ValueError.
+     is between 4 and 12 characters long (inclusive), starts with a letter, and contains only 
+     letters and numbers. A valid player ID is a non-empty string. If the player ID or handle are 
+     invalid, raise a ValueError.
    - player_id should be stored in a private attribute named with two underscores (e.g., 
      `self.__player_id`). It should only be externally visible through a read-only 
      property named `player_id`
